@@ -2,11 +2,11 @@
 
 A web-based production scheduling tool developed using Constraint Programming.
 
-This project models a **Parallel Machine Scheduling problem (P||Cmax)** and solves it using Google OR-Tools.
+This project models a Parallel Machine Scheduling problem (P||Cmax) and solves it using Google OR-Tools.
 
----
+--------------------------------------------------
 
-## Overview
+OVERVIEW
 
 The system assigns jobs to machines while:
 
@@ -14,14 +14,14 @@ The system assigns jobs to machines while:
 - Respecting machine-job compatibility constraints
 - Minimizing total makespan (maximum completion time)
 
-The application provides both:
+The application provides:
 
-- A CLI-based version (`main.py`)
-- A web-based interface built with Streamlit (`app.py`)
+- A CLI-based version (main.py)
+- A web-based interface built with Streamlit (app.py)
 
----
+--------------------------------------------------
 
-## Features
+FEATURES
 
 - Dynamic number of machines and jobs
 - Machine compatibility constraints
@@ -30,43 +30,49 @@ The application provides both:
 - Schedule table output
 - Gantt chart visualization
 
----
+--------------------------------------------------
 
-## Optimization Model
+OPTIMIZATION MODEL
 
-**Problem Type:** Parallel Machine Scheduling (P||Cmax)
+Problem Type:
+Parallel Machine Scheduling (P||Cmax)
 
-**Decision Variables:**
+Decision Variables:
 - Start time of each job
 - Machine assignment of each job
 
-**Constraints:**
-- Each job assigned to one allowed machine
+Constraints:
+- Each job is assigned to one allowed machine
 - No overlapping jobs on the same machine
 - End time = Start time + Duration
 
-**Objective:**
+Objective:
 - Minimize makespan
 
----
+--------------------------------------------------
 
-## How to Run
+HOW TO RUN
 
-### Install dependencies
+Install dependencies:
 pip install -r requirements.txt
 
-Run Web App
+Run Web App:
 streamlit run app.py
 
-Run CLI Version
+Run CLI Version:
 python main.py
 
-Planned Future Improvements:
+--------------------------------------------------
+
+PLANNED FUTURE IMPROVEMENTS
+
 - Due date and tardiness minimization
 - Multi-objective optimization
 - Setup times
 - CSV data import
 - Export functionality
 
-Author
+--------------------------------------------------
+
+Author:
 Melisa Subasi
